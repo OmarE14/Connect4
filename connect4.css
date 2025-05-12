@@ -19,3 +19,10 @@ body{
     margin: 0 auto;
 
 }
+
+.tile{
+
+    height: 90px;
+    width: 90px;
+    background-color: white;
+}
