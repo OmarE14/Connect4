@@ -1,44 +1,55 @@
-body{
 
+body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     background-color: pink;
     color: navy;
-
+    margin: 0;
+    padding: 0;
 }
 
-#board{
-
-    width: 630px;
-    height: 540px;
-
-
+#board {
+    width: 90vw;
+    max-width: 630px;
+    aspect-ratio: 7 / 6;
     background-color: blue;
-    border: 10px solid navy;
-    
+    border: 1vw solid navy;
+
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-
+    margin: 2rem auto;
+    box-sizing: border-box;
 }
 
-.tile{
-
-    height: 70px;
-    width: 70px;
+.tile {
+    width: calc(100% / 7 - 1vw); /* 7 columns */
+    aspect-ratio: 1 / 1; /* Keeps tiles square */
     background-color: white;
     border-radius: 50%;
-    margin: 5px;
-    border: 5px solid navy;
+    margin: 0.5vw;
+    border: 0.5vw solid navy;
+    box-sizing: border-box;
 }
 
-.red-piece{
-
+.red-piece {
     background-color: red;
-
 }
 
-.yellow-piece{
-
+.yellow-piece {
     background-color: yellow;
+}
+
+/* Optional: Adjust layout for very small screens */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    #board {
+        width: 95vw;
+    }
+
+    .tile {
+        margin: 0.4vw;
+    }
 }
